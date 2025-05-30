@@ -15,6 +15,8 @@ export default function CreateExperience() {
         e.preventDefault()
         router.post('/post/experience', values)
         router.get('/')
+        router.get('/#experiences');
+
     }
 
     return (

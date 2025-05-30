@@ -17,7 +17,7 @@ export default function Welcome({ abouts, experiences, competences, projets, con
                         Rana Boutros Rafael,
                     </h1>
                     <p className="text-xl text-amber-500 italic">
-                        développeuse web full-stack & passionnée de design
+                        développeuse web full-stack & passionnée de design !
                     </p>
                 </section>
 

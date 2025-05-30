@@ -41,6 +41,11 @@ Route::delete('/delete/contact/{id}', [ContactController::class, 'destroy']);
 Route::post('/post/contact', [ContactController::class,'store']);
 
 
+//mail
+
+Route::post('/send-email', [ContactController::class, 'sendContactForm']);
+
+
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('dashboard', function () {
         return Inertia::render('dashboard');
