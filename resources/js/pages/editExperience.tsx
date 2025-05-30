@@ -38,7 +38,7 @@ export default function EditExperience({ experience }) {
 
                 <div className="grid grid-cols-1 gap-6">
                     <div>
-                        <label className="mb-1 block text-gray-300">Lieu</label>
+                        <label className="mb-1 block text-gray-300 font-bold text-lg">Lieu</label>
                         <input
                             type="text"
                             name="lieu"
@@ -50,7 +50,7 @@ export default function EditExperience({ experience }) {
                     </div>
 
                     <div>
-                        <label className="mb-1 block text-gray-300">Formation</label>
+                        <label className="mb-1 block text-gray-300 font-bold text-lg">Formation</label>
                         <input
                             type="text"
                             name="formation"
@@ -62,7 +62,7 @@ export default function EditExperience({ experience }) {
                     </div>
 
                     <div>
-                        <label className="mb-1 block text-gray-300">Description</label>
+                        <label className="mb-1 block text-gray-300 font-bold text-lg">Description</label>
                         <input
                             type="text"
                             name="description"
@@ -75,7 +75,7 @@ export default function EditExperience({ experience }) {
                     </div>
 
                     <div>
-                        <label className="mb-1 block text-gray-300">Date</label>
+                        <label className="mb-1 block text-gray-300 font-bold text-lg">Date</label>
                         <textarea
                             name="date"
                             value={values.date}

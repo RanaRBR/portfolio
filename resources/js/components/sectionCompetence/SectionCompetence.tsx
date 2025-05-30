@@ -36,7 +36,7 @@ function SectionCompetence({ competences }) {
                             className="absolute top-4 right-4 text-xl text-amber-400 hover:text-amber-600"
                             onClick={() => Supprimer(competence.id)}
                         >
-                            <ImCross />
+                            <ImCross className='cursor-pointer' />
                         </button>
 
                         <Link

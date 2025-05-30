@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { router } from '@inertiajs/react';
 
 function EditContact({ contact }) {
-
   const [values, setValues] = useState({
     telephone: contact.telephone,
     mail: contact.mail,
@@ -15,58 +14,66 @@ function EditContact({ contact }) {
   };
 
   const soumettre = (e) => {
-  e.preventDefault();
-  router.put(`/update/contact/${contact.id}`, values, {
-    onSuccess: () => {
-      router.get('/#contact');
-    }
-  });
-};
-
+    e.preventDefault();
+    router.put(`/update/contact/${contact.id}`, values, {
+      onSuccess: () => {
+        router.get('/#contact');
+      },
+    });
+  };
 
   return (
-    <div className="max-w-xl mx-auto mt-20 bg-white p-10 rounded-xl shadow-lg">
-      <h2 className="text-3xl font-bold text-center mb-8 text-cyan-700">Modifier mes coordonnées</h2>
+    <div className="flex min-h-screen items-center justify-center bg-black p-4">
+      <form
+        onSubmit={soumettre}
+        className="w-full max-w-2xl rounded-xl border border-cyan-600 bg-gray-900 p-10 shadow-lg"
+      >
+        <h2 className="mb-8 text-center text-3xl font-bold text-amber-500">
+          Modifier mes coordonnées
+        </h2>
 
-      <form onSubmit={soumettre} className="space-y-6">
-        <div>
-          <label className="block font-semibold">Téléphone</label>
-          <input
-            type="text"
-            name="telephone"
-            value={values.telephone}
-            onChange={changer}
-            className="w-full mt-2 border border-cyan-400 focus:border-cyan-600 focus:outline-none p-3 rounded focus:ring-2 focus:ring-cyan-600 text-black"
-          />
+        <div className="grid grid-cols-1 gap-6">
+          <div>
+            <label className="mb-1 block text-gray-300 font-bold text-lg">Téléphone</label>
+            <input
+              type="text"
+              name="telephone"
+              value={values.telephone}
+              onChange={changer}
+              className="w-full rounded-md border border-cyan-500 bg-gray-800 px-4 py-2 text-gray-300 placeholder-gray-500 focus:ring-2 focus:ring-cyan-600 focus:outline-none"
+              placeholder="Numéro de téléphone"
+            />
+          </div>
+
+          <div>
+            <label className="mb-1 block text-gray-300 font-bold text-lg">Email</label>
+            <input
+              type="email"
+              name="mail"
+              value={values.mail}
+              onChange={changer}
+              className="w-full rounded-md border border-cyan-500 bg-gray-800 px-4 py-2 text-gray-300 placeholder-gray-500 focus:ring-2 focus:ring-cyan-600 focus:outline-none"
+              placeholder="Adresse e-mail"
+            />
+          </div>
+
+          <div>
+            <label className="mb-1 block text-gray-300 font-bold text-lg">Localisation (URL Google Maps)</label>
+            <input
+              type="text"
+              name="localisation"
+              value={values.localisation}
+              onChange={changer}
+              className="w-full rounded-md border border-cyan-500 bg-gray-800 px-4 py-2 text-gray-300 placeholder-gray-500 focus:ring-2 focus:ring-cyan-600 focus:outline-none"
+              placeholder="https://maps.google.com/..."
+            />
+          </div>
         </div>
 
-        <div>
-          <label className="block font-semibold">Email</label>
-          <input
-            type="email"
-            name="mail"
-            value={values.mail}
-            onChange={changer}
-            className="w-full mt-2 border border-cyan-400 focus:border-cyan-600 focus:outline-none p-3 rounded focus:ring-2 focus:ring-cyan-600 text-black"
-          />
-        </div>
-
-        <div>
-          <label className="block font-semibold">Adresse / Localisation (URL Google Maps)</label>
-          <input
-            type="text"
-            name="localisation"
-            value={values.localisation}
-            onChange={changer}
-            placeholder="https://maps.google.com/..."
-            className="w-full mt-2 border border-cyan-400 focus:border-cyan-600 focus:outline-none p-3 rounded focus:ring-2 focus:ring-cyan-600 text-black"
-          />
-        </div>
-
-        <div className="text-center">
+        <div className="mt-8 text-center">
           <button
             type="submit"
-            className="bg-cyan-600 text-white px-6 py-3 rounded hover:bg-cyan-700 transition cursor-pointer"
+            className="cursor-pointer rounded-lg bg-cyan-600 px-6 py-3 font-semibold text-white transition-all hover:bg-cyan-700 focus:ring-2 focus:ring-cyan-300 focus:outline-none"
           >
             Enregistrer
           </button>

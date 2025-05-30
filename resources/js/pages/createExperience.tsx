@@ -2,6 +2,7 @@ import { router } from '@inertiajs/react'
 import { useState } from 'react'
 
 export default function CreateExperience() {
+
     const [values, setValues] = useState({
         lieu: '',
         formation: '',
@@ -28,7 +29,7 @@ export default function CreateExperience() {
 
                 <div className="grid grid-cols-1 gap-6">
                     <div>
-                        <label className="mb-1 block text-gray-300">Lieu</label>
+                        <label className="mb-1 block text-gray-300 font-bold">Lieu</label>
                         <input
                             type="text"
                             name="lieu"
@@ -42,7 +43,7 @@ export default function CreateExperience() {
                     </div>
 
                     <div>
-                        <label className="mb-1 block text-gray-300">Formation</label>
+                        <label className="mb-1 block text-gray-300 font-bold">Formation</label>
                         <input
                             type="text"
                             name="formation"
@@ -56,7 +57,7 @@ export default function CreateExperience() {
                     </div>
 
                     <div>
-                        <label className="mb-1 block text-gray-300">Description</label>
+                        <label className="mb-1 block text-gray-300 font-bold">Description</label>
                         <textarea
                             name="description"
                             value={values.description}
@@ -70,7 +71,7 @@ export default function CreateExperience() {
                     </div>
 
                     <div>
-                        <label className="mb-1 block text-gray-300">Date</label>
+                        <label className="mb-1 block text-gray-300 font-bold">Date</label>
                         <input
                             type="text"
                             name="date"

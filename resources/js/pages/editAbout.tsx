@@ -28,7 +28,7 @@ function EditA({ about }) {
 
                 <div className="grid grid-cols-1 gap-6">
                     <div>
-                        <label className="block text-gray-300 mb-1">Prénom</label>
+                        <label className="block text-gray-300 mb-1 font-bold  text-xl">Prénom</label>
                         <input
                             type="text"
                             name="prénom"
@@ -40,7 +40,7 @@ function EditA({ about }) {
                     </div>
 
                     <div>
-                        <label className="block text-gray-300 mb-1">Nom</label>
+                        <label className="block text-gray-300 mb-1 font-bold text-lg">Nom</label>
                         <input
                             type="text"
                             name="nom"
@@ -52,7 +52,7 @@ function EditA({ about }) {
                     </div>
 
                     <div>
-                        <label className="block text-gray-300 mb-1">Email</label>
+                        <label className="block text-gray-300 mb-1 font-bold text-lg">Email</label>
                         <input
                             type="email"
                             name="email"
@@ -64,7 +64,7 @@ function EditA({ about }) {
                     </div>
 
                     <div>
-                        <label className="block text-gray-300 mb-1">Biographie</label>
+                        <label className="block text-gray-300 mb-1 font-bold text-lg">Biographie</label>
                         <textarea
                             name="bio"
                             rows="4"
@@ -76,7 +76,7 @@ function EditA({ about }) {
                     </div>
 
                     <div>
-                        <label className="block text-gray-300 mb-1">Photo (nom du fichier)</label>
+                        <label className="block text-gray-300 mb-1 font-bold text-lg">Photo (nom du fichier)</label>
                         <input
                             type="text"
                             name="photo"
