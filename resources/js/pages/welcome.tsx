@@ -2,6 +2,7 @@ import SectionAbout from '@/components/sectionAbout/SectionAbout';
 import SectionCompetence from '@/components/sectionCompetence/SectionCompetence';
 import SectionContact from '@/components/sectionContact/SectionContact';
 import SectionExperience from '@/components/sectionExperience/SectionExperience';
+import SectionProjet from '@/components/sectionProjet/SectionProjet';
 import Sidebar from '@/components/sideBar/SideBar';
 
 export default function Welcome({ abouts, experiences, competences, projets, contacts }) {
@@ -50,6 +51,7 @@ export default function Welcome({ abouts, experiences, competences, projets, con
                 <SectionAbout abouts={abouts} />
                 <SectionExperience experiences={experiences} />
                 <SectionCompetence competences={competences} />
+                <SectionProjet projets={projets} />
                 <SectionContact contacts={contacts} />
             </main>
         </div>

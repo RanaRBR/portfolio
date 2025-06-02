@@ -4,6 +4,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\CompetenceController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ExperienceController;
+use App\Http\Controllers\ProjetController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -44,6 +45,16 @@ Route::post('/post/contact', [ContactController::class,'store']);
 //mail
 
 Route::post('/send-email', [ContactController::class, 'sendContactForm']);
+
+
+//projet
+
+Route::get('/create/projet', [ProjetController::class, 'create']);
+Route::get('/edit/projet/{id}', [ProjetController::class, 'edit']);
+Route::put('/update/projet/{id}', [ProjetController::class, 'update']);
+Route::delete('/delete/projet/{id}', [ProjetController::class, 'destroy']);
+Route::post('/post/projet', [ProjetController::class,'store']);
+
 
 
 Route::middleware(['auth', 'verified'])->group(function () {

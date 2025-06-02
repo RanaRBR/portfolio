@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('projets', function (Blueprint $table) {
             $table->id();
-            $table->string('projet');
-            $table->string('lien');
-            $table->string('explications');
+            $table->string('nom');
+            $table->text('lien');
+            $table->string('description');
             $table->foreignId('about_id')->constrained();
             $table->timestamps();
         });

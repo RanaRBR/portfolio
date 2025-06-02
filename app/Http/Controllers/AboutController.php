@@ -8,6 +8,7 @@ use App\Http\Requests\UpdateAboutRequest;
 use App\Models\Competence;
 use App\Models\Experience;
 use App\Models\Contact;
+use App\Models\Projet;
 use Illuminate\Http\Client\Request as ClientRequest;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
@@ -23,12 +24,13 @@ class AboutController extends Controller
         $experiences = Experience::all();
         $competences = Competence::all();
         $contacts = Contact::all();
+        $projets = Projet::all();
         return Inertia::render('welcome', [
             'abouts'=> $abouts,
             'experiences' => $experiences,
             'competences'=>$competences,
             'contacts'=>$contacts,
-            // 'projets'=>$projets,
+            'projets'=>$projets,
 
         ]);
     }

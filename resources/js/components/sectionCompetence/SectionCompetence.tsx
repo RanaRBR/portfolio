@@ -1,6 +1,5 @@
 import { Link, router } from '@inertiajs/react';
-import { FaPencilAlt } from 'react-icons/fa';
-import { ImCross } from 'react-icons/im';
+import { FaPencilAlt, FaTrashAlt } from 'react-icons/fa';
 
 function SectionCompetence({ competences }) {
     const spanColors = [
@@ -36,7 +35,7 @@ function SectionCompetence({ competences }) {
                             className="absolute top-4 right-4 text-xl text-amber-400 hover:text-amber-600"
                             onClick={() => Supprimer(competence.id)}
                         >
-                            <ImCross className='cursor-pointer' />
+                            <FaTrashAlt className="cursor-pointer" />
                         </button>
 
                         <Link
